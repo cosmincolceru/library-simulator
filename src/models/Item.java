@@ -10,12 +10,19 @@ public class Item {
 
     public static int numberOfItems;
 
-
+    public Item() {}
     public Item(int itemId, String name, int numberOfCopies) {
         this.itemId = itemId;
         this.name = name;
         this.numberOfCopies = numberOfCopies;
         this.numberOfAvailableCopies = numberOfCopies;
+    }
+
+    public Item(int itemId, String name, int numberOfCopies, int numberOfAvailableCopies) {
+        this.itemId = itemId;
+        this.name = name;
+        this.numberOfCopies = numberOfCopies;
+        this.numberOfAvailableCopies = numberOfAvailableCopies;
     }
 
     public int getItemId() {

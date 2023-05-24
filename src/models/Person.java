@@ -8,6 +8,8 @@ public class Person {
     String CNP;
     String birthdate;
 
+    public Person() { }
+
     public Person(String firstName, String lastName, String CNP, String birthdate) {
         this.firstName = firstName;
         this.lastName = lastName;

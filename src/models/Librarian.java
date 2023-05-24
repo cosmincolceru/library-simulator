@@ -8,6 +8,7 @@ public class Librarian extends Person {
 
     static public int numberOfLibrarians;
 
+    public Librarian() { }
 
     public Librarian(String firstName, String lastName, String CNP, String birthdate, double salary, int librarianId) {
         super(firstName, lastName, CNP, birthdate);
@@ -38,6 +39,7 @@ public class Librarian extends Person {
                 ", lastName='" + lastName + '\'' +
                 ", CNP='" + CNP + '\'' +
                 ", birthdate='" + birthdate + '\'' +
+                ", librarianId=" + librarianId + '\'' +
                 '}';
     }
 

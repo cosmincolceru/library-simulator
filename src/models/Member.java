@@ -7,6 +7,9 @@ public class Member extends Person {
     int memberId;
     List<Item> itemsRented;
     public static int numberOfMembers;
+
+    public Member() { }
+
     public Member(String firstName, String lastName, String CNP, String birthdate, int memberId) {
         super(firstName, lastName, CNP, birthdate);
         this.memberId = memberId;

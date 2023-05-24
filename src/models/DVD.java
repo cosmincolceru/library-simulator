@@ -1,6 +1,5 @@
 package models;
 
-import java.util.List;
 import java.util.Objects;
 
 public class DVD extends Item {
@@ -9,8 +8,18 @@ public class DVD extends Item {
     int duration;
     String genre;
 
+    public DVD() { }
+
     public DVD(int itemId, String name, int numberOfCopies, String director, int releaseYear, int duration, String genre) {
         super(itemId, name, numberOfCopies);
+        this.director = director;
+        this.releaseYear = releaseYear;
+        this.duration = duration;
+        this.genre = genre;
+    }
+
+    public DVD(int itemId, String name, int numberOfCopies, int numberOfAvailableCopies, String director, int releaseYear, int duration, String genre) {
+        super(itemId, name, numberOfCopies, numberOfAvailableCopies);
         this.director = director;
         this.releaseYear = releaseYear;
         this.duration = duration;

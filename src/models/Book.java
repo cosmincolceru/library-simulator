@@ -7,8 +7,16 @@ public class Book extends Item {
     int publicationYear;
     String publisher;
 
+    public Book() { }
     public Book(int itemId, String name, int numberOfCopies, String author, int publicationYear, String publisher) {
         super(itemId, name, numberOfCopies);
+        this.author = author;
+        this.publicationYear = publicationYear;
+        this.publisher = publisher;
+    }
+
+    public Book(int itemId, String name, int numberOfCopies, int numberOfAvailableCopies,String author, int publicationYear, String publisher) {
+        super(itemId, name, numberOfCopies, numberOfAvailableCopies);
         this.author = author;
         this.publicationYear = publicationYear;
         this.publisher = publisher;

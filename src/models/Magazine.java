@@ -5,8 +5,14 @@ import java.util.Objects;
 public class Magazine extends Item {
     String publicationDate;
 
+    public Magazine() { }
     public Magazine(int itemId, String name, int numberOfCopies, String publicationDate) {
         super(itemId, name, numberOfCopies);
+        this.publicationDate = publicationDate;
+    }
+
+    public Magazine(int itemId, String name, int numberOfCopies, int numberOfAvailableCopies, String publicationDate) {
+        super(itemId, name, numberOfCopies, numberOfAvailableCopies);
         this.publicationDate = publicationDate;
     }
 

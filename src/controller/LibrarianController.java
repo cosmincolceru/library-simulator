@@ -3,10 +3,15 @@ package controller;
 import models.Librarian;
 import service.LibrarianService;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public class LibrarianController {
     private LibrarianService librarianService;
 
-    public LibrarianController() {this.librarianService = new LibrarianService(); }
+    public LibrarianController() {
+        librarianService = LibrarianService.getInstance();
+    }
 
     public boolean addLibrarian(String firstName, String lastName, String CNP, String birthdate, double salary) {
         firstName = capitalizeString(firstName);
@@ -15,7 +20,7 @@ public class LibrarianController {
         return librarianService.addLibrarian(firstName, lastName, CNP, birthdate, salary);
     }
 
-    public Librarian[] getAllLibrarians() { return librarianService.getAllLibrarians(); }
+    public ArrayList<Librarian> getAllLibrarians() { return librarianService.getAllLibrarians(); }
 
     private String capitalizeString (String str) {
         return str.substring(0,1).toUpperCase() + str.substring(1).toLowerCase();
@@ -25,7 +30,7 @@ public class LibrarianController {
         return librarianService.removeLibrarian(librarianId);
     }
 
-    public Librarian getLibrarianBiggestSalary() {
+    public Set<Librarian> getLibrarianBiggestSalary() {
         return librarianService.getLibrarianBiggestSalary();
     }
 }
